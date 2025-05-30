@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/usuarios")
@@ -44,4 +45,18 @@ public class UsuarioController {
         usuarioService.eliminarUsuario(id);
     }
 
+
+//    @GetMapping("/activos")
+//    public ResponseEntity<Collection<UsuarioResponse>> obtenerUsuariosActivos(@RequestParam(required = false) Boolean activo) {
+//        // Equivalente a ngIf: filtrar usuarios según condición
+//        Collection<UsuarioResponse> todos = usuarioService.obtenerTodosLosUsuarios();
+//
+//        if (activo != null) {
+//            Collection<UsuarioResponse> filtrados = todos.stream()
+//                    .filter(u -> u.getEstado().equals(activo))
+//                    .collect(Collectors.toList());
+//            return ResponseEntity.ok(filtrados);
+//        }
+//        return ResponseEntity.ok(todos);
+//    }
 }
