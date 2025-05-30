@@ -29,4 +29,8 @@ export class UsuarioListComponent implements OnInit {
       }
     );
   }
+
+  crearUsuario() {
+
+  }
 }
